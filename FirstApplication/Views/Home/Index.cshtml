@@ -1,0 +1,16 @@
+﻿@model List<Student>
+@{
+    ViewBag.Title = "Home";
+    var message = "Home - Index";
+}
+
+<h2>Index</h2>
+<hr />
+@Html.Partial("_HeaderMessage", message)
+<br />
+
+@foreach (var item in Model)
+{
+    @Html.TextBoxFor(m => item.Name)
+}
+
